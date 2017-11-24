@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json());
+const getAll = require('./get-all');
 var datas = require('./datas');
 
-app.get('/', (req, res) => {
-    res.json(datas)
-})
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+
+
 
 
 
