@@ -15,5 +15,13 @@ const datas = [
         url: 'www.google.com',
         note: 'Tang is God.'
     },
+    {
+        firstname: 'Suthida',
+        lastname: 'Sangthong',
+        email: '58160593@go.buu.ac.th',
+        tel: '0813457682',
+        url: 'www.google.com',
+        note: 'She is long hair.'
+    }
 ];
 module.exports = datas;
