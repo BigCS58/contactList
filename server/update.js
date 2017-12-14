@@ -3,17 +3,25 @@ const express = require('express');
 
 const router = express.Router();
 
-router.put('/contacts/:name', (req, res) => {
-    let index = datas.findIndex((data) => {
-        if (req.params.name == data.firstname) {
-            return data;
-        }
-    });
-
+router.put('/contacts/:id', (req, res) => {
+    let index = req.params.id
     let editFriend = req.body;
-    editFriend.createdAt = Date.now();
-    datas[index] = editFriend;
-    res.json(datas);
+    for (let i = 0; i < datas.length; i++) {
+        if ((datas[i].firstname == editFriend.firstname || datas[i].email == editFriend.email) && i != index) {
+            index = -1;
+            break;
+        }
+    }
+
+
+    if (index == -1) {
+        res.json({ alert: 'Email or Firstname has already !' });
+    }
+    else {
+        editFriend.createdAt = Date.now();
+        datas[index] = editFriend;
+        res.json(datas);
+    }
 })
 
 module.exports = router;

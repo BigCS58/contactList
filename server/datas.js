@@ -2,7 +2,7 @@ const datas = [
     {
         firstname: 'Patiphan',
         lastname: 'patdam',
-        email: 'example@gmail.com',
+        email: '58160083@gmail.com',
         tel: '0822167324',
         url: 'www.google.com',
         note: 'I am a student.'
@@ -10,7 +10,7 @@ const datas = [
     {
         firstname: 'Supawadee',
         lastname: 'Tangmo',
-        email: 'example@gmail.com',
+        email: 'supawadee@gmail.com',
         tel: '0874568211',
         url: 'www.google.com',
         note: 'Tang is God.'

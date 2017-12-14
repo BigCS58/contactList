@@ -4,7 +4,7 @@ const getAll = require('./get-all');
 const update = require('./update');
 const remove = require('./delete');
 var datas = require('./datas');
-var post= require('./post');
+var post = require('./post');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }))
